@@ -13,12 +13,10 @@ import psutil
 import datetime
 import tornado.web
 import tornado.ioloop
+from settings import *
 
 
-customers = {
-    }
-
-projects = ['wx', 'bots']
+projects = ['wx', 'bots','hq']
 
 
 class ReloadHandler(tornado.web.RequestHandler):
