@@ -8,3 +8,4 @@
 !.gitignore
 .tag*
 nohup.out
+settings.py

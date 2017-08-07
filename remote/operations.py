@@ -14,11 +14,9 @@ import datetime
 import tornado.web
 import tornado.ioloop
 
+from settings import *
 
-customers = {
-    }
-
-projects = ['wx', 'bots']
+projects = ['wx', 'bots', 'fountain']
 
 
 class ReloadHandler(tornado.web.RequestHandler):

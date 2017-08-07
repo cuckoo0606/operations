@@ -95,11 +95,22 @@ class ReloadWXHandler(tornado.web.RequestHandler):
             return self.write('重启微信出现异常')
 
 
+class ReloadFountainHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        '''
+            重启行情
+        '''
+        os.system('pm2 reload fountain')
+        return self.write('重启行情成功')
+
+
 def make_app():
     return tornado.web.Application([
         (r"/v1/query/systeminfos", SystemInfosHandler),
         (r"/v1/reload/bots", ReloadBotsHandler),
         (r"/v1/reload/wx", ReloadWXHandler),
+        (r"/v1/reload/fountain", ReloadFountainHandler),
     ])
 
 
